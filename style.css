@@ -1,0 +1,127 @@
+body {
+    font-family: "poppins", serif;
+    background-color: #1A1A1D;
+}
+
+/* CSS Barra Top */
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 1080px) {
+    .menu {
+        flex-direction: column;
+        gap: 20px;
+        margin: 20px;
+    }
+}
+
+.menu_header {
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    font-size: 25px;
+    display: flex;
+    gap: 100px;
+    margin: 60px;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu a {
+    transition: 0.2s;
+    color: #A31D1D;
+    text-decoration: none;
+    padding: 15px;
+    display: inline-block;
+    position: relative;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 5px;
+    left: 0;
+    background-color: #A31D1D;
+    transform: scaleX(0);
+    transform-origin: bottom;
+    transition: transform 0.4s ease-out;
+}
+
+.menu a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom;
+}
+
+.menu a:hover {
+    transition: 0.3s;
+    color: rgba(255, 255, 255, 0.703);
+    text-shadow: 0 0 10px rgb(202, 66, 66);
+    font-weight: bold;
+}
+
+/* CSS Nombre_Presentacion */
+
+/* Media query para pantallas más pequeñas */
+@media (max-width: 1080px) {
+    .mi_vida {
+        padding: 10px;
+        margin: 2rem;
+        flex-direction: column;
+    }
+    #nombre, #apellido, #profesion {
+        font-size: 8vw;
+        left: 0;
+        top: 0;
+        position: relative;
+        text-align: center;
+    }
+    #profesion {
+        font-size: 4vw;
+    }
+}
+
+.mi_vida {
+    display: flex;
+    margin: 5rem;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.nombre_contenedor {
+    display: flex;
+    position: relative;
+    margin: 5rem;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+#nombre {
+    font-size: 6vw;
+    position: relative;
+    color: antiquewhite;
+    margin: 1rem 0;
+    right: 13vw;
+}
+
+#apellido {
+    font-size: 6vw;
+    position: relative;
+    color: antiquewhite;
+    margin: 1rem 0;
+    left: 10vw;
+}
+
+#profesion {
+    font-size: 0.9vw;
+    color: #A31D1D;
+    position: relative;
+    margin: 1rem 0;
+    top: -9.9vw;
+    left: 25.3vw;
+}
